@@ -1,0 +1,47 @@
+generated: '2026-09-06'
+method: searched
+source: >-
+  Registry sweeps of npm, PyPI, RubyGems, crates.io, NuGet, Maven Central and the Go module proxy,
+  plus the abstract.security site and the AbstractSecurity GitHub organization.
+package_count: 0
+note: >-
+  Abstract Security publishes NO first-party client library in any public package registry. The
+  company operates no developer portal and no public API reference, so there is no API for an SDK
+  to wrap. Registries were checked directly, not inferred.
+rejected:
+- name: abstract-security
+  registry: pypi
+  url: https://pypi.org/project/abstract-security/
+  version: '0.83'
+  published: '2026-08-23'
+  official: false
+  reason: >-
+    NAME COLLISION, NOT THIS COMPANY. The PyPI project `abstract-security` is published by
+    "putkoff" / partners@abstractendeavors.com and its only project URL is
+    https://github.com/AbstractEndeavors/abstract_security. It is an env/.env secrets-loading and
+    JWT helper library in the "Abstract Secure Backend" stack, unrelated to Abstract Security the
+    SIEM vendor. Recorded here so a later pass does not re-adopt it.
+registries_checked:
+- {registry: npm, query: 'abstract-security, @abstract-security/sdk', status: 404, found: 0}
+- {registry: pypi, query: abstract-security, status: 200, found: 0, note: '200 but third-party — see rejected list'}
+- {registry: rubygems, query: abstract-security, status: 404, found: 0}
+- {registry: crates.io, query: abstract-security, status: 403, found: 0, note: 'crates.io rejected the unauthenticated request; no evidence of a crate either way'}
+- {registry: nuget, query: abstract.security, status: 404, found: 0}
+- {registry: maven-central, query: abstract.security, status: 200, found: 0, note: 'numFound 0'}
+- {registry: go-proxy, query: github.com/abstractsecurity/, status: 404, found: 0}
+packages: []
+first_party_repositories:
+- name: Astro-Open-Rulesets
+  url: https://github.com/AbstractSecurity/Astro-Open-Rulesets
+  language: Python
+  license: MIT
+  description: >-
+    Open YARA detection rulesets (DFIR and macOS) published by the Abstract Security Threat Research
+    Organization (ASTRO). Detection content, NOT a client library — it is listed here for provenance
+    and is deliberately excluded from packages[] because it wraps no API.
+  last_push: '2025-09-16'
+- name: maven-artifactory-setup-action
+  url: https://github.com/AbstractSecurity/maven-artifactory-setup-action
+  description: >-
+    GitHub Action to configure Artifactory for Maven. Internal CI tooling, not a client SDK.
+  last_push: '2025-03-15'

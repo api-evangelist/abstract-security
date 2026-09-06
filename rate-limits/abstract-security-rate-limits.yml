@@ -1,0 +1,14 @@
+generated: '2026-09-06'
+method: searched
+source: https://www.abstract.security/
+limit_count: 0
+note: >-
+  No published rate limits. Abstract Security operates no public developer portal, no API reference
+  and no machine-readable contract, so there is no documented limit, window, burst or response-header
+  contract to record. This is an honest zero produced by looking, not an omission.
+evidence:
+- {url: 'https://www.abstract.security/docs', status: 404}
+- {url: 'https://www.abstract.security/developers', status: 404}
+- {url: 'https://www.abstract.security/api', status: 404}
+headers: []
+limits: []

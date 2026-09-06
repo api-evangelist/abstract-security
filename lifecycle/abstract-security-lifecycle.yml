@@ -1,0 +1,37 @@
+generated: '2026-09-06'
+method: probed
+source: https://www.abstract.security/
+note: >-
+  Abstract Security publishes no versioning policy, no deprecation policy, no SLA and no public
+  status page. Because there is no public API contract, there are also no deprecated operations to
+  derive. No StatusPage and no Deprecation pointer is emitted — every surface below is an absence
+  or is not publicly served.
+versioning: null
+deprecation:
+  policy_url: null
+  sunset_header: null
+sla: null
+status_page: null
+status_page_candidate:
+  url: https://abstract.statuspage.io/
+  observed_status: 200
+  effective_url: https://abstract.statuspage.io/inactive
+  served: false
+  owner_confirmed: false
+  note: >-
+    An Atlassian Statuspage tenant named "abstract" answers 200 but immediately redirects to
+    /inactive with the title "Abstract Status - Page Inactive" and the body "This page is currently
+    inactive and can only be viewed by team members." Its API (/api/v2/summary.json) replies "Your
+    page is inactive. Please include an API key to access this resource." No content links it to
+    Abstract Security rather than any other company named Abstract, so ownership is NOT confirmed
+    and it is recorded as a candidate only. Even if it is theirs, it is not a served status page and
+    must not earn a StatusPage pointer.
+changelog: null
+evidence:
+- {url: 'https://www.abstract.security/changelog', status: 404}
+- {url: 'https://www.abstract.security/release-notes', status: 404}
+- {url: 'https://www.abstract.security/whats-new', status: 404}
+- {url: 'https://status.abstract.security/', status: 0, note: 'no public DNS record'}
+- {url: 'https://trust.abstract.security/', status: 0, note: 'no public DNS record'}
+- {url: 'https://abstract.statuspage.io/', status: 200, note: 'redirects to /inactive; not served'}
+deprecated_operations: []

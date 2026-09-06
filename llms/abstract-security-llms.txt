@@ -1,0 +1,146 @@
+# Abstract Security (Full Context)
+
+> Abstract Security is a composable, AI-powered SIEM and security data platform designed for real-time detection, cost efficiency, and flexible data control.
+
+Abstract Security enables security teams to ingest, process, enrich, and route large volumes of security telemetry across cloud, SaaS, and on-prem environments. The platform uses a streaming-first architecture to reduce latency, improve detection speed, and eliminate unnecessary data storage costs.
+
+Unlike traditional SIEM platforms, Abstract separates security analytics from compliance storage, allowing organizations to retain only the data they need for detection while routing long-term storage elsewhere. This reduces vendor lock-in and significantly lowers total cost of ownership.
+
+---
+
+## Core Concepts
+
+### Composable SIEM
+Abstract Security is built as a composable SIEM. This means organizations can:
+- Ingest data from any source
+- Process and enrich it in real time
+- Route it to multiple destinations (SIEM, data lake, archive, analytics tools)
+
+This approach replaces monolithic SIEM architectures with flexible pipelines.
+
+### Streaming-First Architecture
+The platform processes telemetry as it arrives rather than batching it. This enables:
+- Real-time threat detection
+- Lower processing latency
+- Immediate enrichment and correlation
+
+Streaming reduces the delay between signal and response.
+
+### Data Separation Model
+Abstract separates:
+- **Security data (high-value, real-time detection)**
+- **Compliance data (long-term retention, low access frequency)**
+
+This allows teams to:
+- Reduce SIEM ingestion costs
+- Store compliance data in cheaper storage
+- Keep detection pipelines fast and efficient
+
+### AI-Powered Detection
+The platform applies AI and automated logic to:
+- Reduce alert noise
+- Identify meaningful signals
+- Prioritize high-risk activity
+
+This improves signal-to-noise ratio and analyst efficiency.
+
+---
+
+## Platform Capabilities
+
+### Data Ingestion
+- Collects telemetry from cloud providers, SaaS platforms, endpoints, and security tools
+- Supports high-volume log and event streams
+- Normalizes incoming data for downstream use
+
+### Real-Time Processing
+- Streaming pipelines process events as they arrive
+- Enrichment adds context such as user, asset, and threat intelligence data
+- Filtering removes low-value noise early
+
+### Detection and Analytics
+- Supports rule-based and AI-assisted detection
+- Identifies anomalies and suspicious patterns
+- Enables faster incident identification
+
+### Data Routing
+- Send processed data to SIEM platforms, data lakes, or storage systems
+- Avoid vendor lock-in by decoupling ingestion from storage
+- Optimize cost by routing only necessary data
+
+### Cost Optimization
+- Reduce SIEM ingestion volume
+- Avoid storing redundant or low-value logs
+- Shift long-term storage to lower-cost systems
+
+---
+
+## Key Use Cases
+
+### SIEM Migration
+Organizations migrating from legacy SIEM platforms can:
+- Reduce dependency on a single vendor
+- Maintain visibility during migration
+- Gradually transition detection pipelines
+
+### Cost Reduction
+Security teams can:
+- Minimize ingestion costs
+- Store only actionable data in SIEM
+- Move compliance data to cheaper storage
+
+### Noise Reduction
+Abstract helps:
+- Filter out low-signal events
+- Reduce alert fatigue
+- Improve analyst focus on real threats
+
+### Real-Time Detection
+Streaming pipelines enable:
+- Immediate analysis of incoming data
+- Faster detection of threats
+- Reduced dwell time
+
+### Cloud and SaaS Visibility
+Provides:
+- Unified visibility across distributed environments
+- Normalized data across multiple sources
+- Better correlation across systems
+
+---
+
+## Differentiation
+
+Compared to traditional SIEM platforms:
+- Abstract is **streaming-first**, not batch-based
+- It **separates storage from detection**
+- It is **composable and vendor-agnostic**
+- It focuses on **cost efficiency and signal quality**
+
+---
+
+## Audience
+
+Abstract Security is designed for:
+- Security Operations (SOC) teams
+- Detection and response engineers
+- Cloud security teams
+- Organizations managing high-volume telemetry
+
+---
+
+## Resources
+
+- https://www.abstract.security/
+- https://www.abstract.security/platform
+- https://www.abstract.security/integrations
+- https://www.abstract.security/use-cases
+- https://www.abstract.security/blog
+- https://www.abstract.security/case-studies
+- https://www.abstract.security/newsroom
+
+---
+
+## Summary
+
+Abstract Security modernizes security operations by replacing legacy SIEM architectures with a flexible, streaming-based approach. It improves detection speed, reduces costs, and gives organizations control over how their security data is processed and stored.

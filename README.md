@@ -64,5 +64,27 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Abstract Security is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Abstract Security is a security data platform and AI-powered composable SIEM founded in 2023 by Colby
+DeRodeff and Aaron Shelmire. Its streaming-first architecture ingests security telemetry from cloud,
+SaaS, endpoint and on-prem sources, then filters, normalizes, enriches and routes it in real time to
+SIEMs, data lakes and low-cost archives, separating high-value detection data from long-term
+compliance retention. Named components include Collection, Detection Fabric, AI-Enabled SecOps,
+Retention and the Abstract Intel Gallery (AIG).
+
+- Website: https://www.abstract.security/
+- Integrations catalog: https://www.abstract.security/integrations
+- GitHub (ASTRO threat research): https://github.com/AbstractSecurity
+
+## API surface
+
+As of the 2026-09-06 enrichment pass, Abstract Security publishes **no public developer portal, no
+API reference, and no machine-readable contract**. `/docs`, `/developers`, `/api`, `/api-docs` and
+`/openapi.json` all return 404 on `www.abstract.security`; the 348-URL sitemap contains no developer
+page; every named `/.well-known/` path 404s on both hosts (with a negative control confirming the
+host is not a catch-all responder); and no A2A agent card, MCP server, GraphQL endpoint, gRPC/WSDL
+contract or first-party SDK exists in any public registry. The API host named in the company's own
+TLS certificate, `api.abstract.security`, publishes no public DNS record. Platform access runs
+through the demo request at `/get-a-demo`, so this profile is recorded as `gated` / `sales-gate`.
+
+What the company *does* publish machine-readably is a real `/llms.txt`, harvested verbatim to
+`llms/abstract-security-llms.txt`.

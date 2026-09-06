@@ -1,0 +1,14 @@
+generated: '2026-09-06'
+method: searched
+source: https://www.abstract.security/get-a-demo
+plan_count: 0
+note: >-
+  Abstract Security publishes NO pricing page and NO plan tiers. https://www.abstract.security/pricing
+  returns 404, and neither the site navigation nor the sitemap (348 URLs) contains a pricing, plans or
+  packaging page. The only commercial entry point is a demo request form at /get-a-demo, which routes
+  to sales. This is an enterprise contact-us motion, not undisclosed data.
+evidence:
+- {url: 'https://www.abstract.security/pricing', status: 404}
+- {url: 'https://www.abstract.security/get-a-demo', status: 200}
+- {url: 'https://www.abstract.security/sitemap.xml', status: 200, note: '348 URLs, no pricing page'}
+plans: []

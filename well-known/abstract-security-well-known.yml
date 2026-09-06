@@ -1,0 +1,62 @@
+generated: '2026-09-06'
+method: probed
+source: https://www.abstract.security/
+note: >-
+  Every named /.well-known/ path was probed on both hosts the record knows (the registrable domain
+  and www). All returned 404. The API host named in Certificate Transparency (api.abstract.security)
+  and the UI host (ui.abstract.security) hold certificates but publish NO public DNS record, so they
+  could not be probed at all — recorded in unreachable_hosts below rather than as 404s we did not
+  observe. No WellKnown or SecurityTxt pointer is emitted: every path is an absence.
+hit_count: 0
+path_echo_control: passed
+soft_404_control:
+  path: /.well-known/abstract-security-negative-control-7f3ab91c.json
+  status: 404
+  bytes: 88
+  note: >-
+    The negative control 404s, so this host is not a path-echoing or catch-all responder and the
+    404s below are genuine absences. Webflow returns a fixed 88-byte "Invalid .well-known request"
+    body for every /.well-known/* path.
+unreachable_hosts:
+- host: api.abstract.security
+  reason: no-public-dns
+  evidence: >-
+    Present in Certificate Transparency for abstract.security (crt.sh), but `dig +short
+    api.abstract.security` returns no record and curl fails to connect (exit 6, HTTP 000).
+- host: ui.abstract.security
+  reason: no-public-dns
+  evidence: >-
+    Present in Certificate Transparency for abstract.security (crt.sh); no public A/CNAME record.
+hosts:
+- host: https://abstract.security
+  documents:
+  - {path: /.well-known/security.txt, status: 404, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+  - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+  - {path: /.well-known/api-catalog, status: 404, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+  - {path: /.well-known/ucp.json, status: 404, file: null}
+  - {path: /.well-known/acp.json, status: 404, file: null}
+  - {path: /.well-known/aauth-resource.json, status: 404, file: null}
+  - {path: /.well-known/apis.json, status: 404, file: null}
+  - {path: /apis.json, status: 404, file: null}
+  - {path: /apis.yml, status: 404, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, file: null}
+  - {path: /.well-known/agent.json, status: 404, file: null}
+- host: https://www.abstract.security
+  documents:
+  - {path: /.well-known/security.txt, status: 404, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+  - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+  - {path: /.well-known/api-catalog, status: 404, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+  - {path: /.well-known/ucp.json, status: 404, file: null}
+  - {path: /.well-known/acp.json, status: 404, file: null}
+  - {path: /.well-known/aauth-resource.json, status: 404, file: null}
+  - {path: /.well-known/apis.json, status: 404, file: null}
+  - {path: /apis.json, status: 404, file: null}
+  - {path: /apis.yml, status: 404, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, file: null}
+  - {path: /.well-known/agent.json, status: 404, file: null}
