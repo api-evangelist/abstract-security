@@ -64,27 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Abstract Security is a security data platform and AI-powered composable SIEM founded in 2023 by Colby
-DeRodeff and Aaron Shelmire. Its streaming-first architecture ingests security telemetry from cloud,
-SaaS, endpoint and on-prem sources, then filters, normalizes, enriches and routes it in real time to
-SIEMs, data lakes and low-cost archives, separating high-value detection data from long-term
-compliance retention. Named components include Collection, Detection Fabric, AI-Enabled SecOps,
-Retention and the Abstract Intel Gallery (AIG).
+Abstract Security is a security data platform and AI-powered composable SIEM founded in 2023 by Colby DeRodeff and Aaron Shelmire. Its streaming-first architecture ingests security telemetry from cloud, SaaS, endpoint and on-prem sources, then filters, normalizes, enriches and routes it in real time to SIEMs, data lakes and low-cost archives. The platform separates high-value detection data from long-term compliance retention so teams can cut SIEM ingest cost without losing visibility. Named components include Collection (the security data control plane), Detection Fabric, AI-Enabled SecOps, Retention, and the Abstract Intel Gallery (AIG) for operationalizing threat intelligence. The company publishes a catalog of roughly 230 source, destination and action integrations covering AWS, Microsoft Sentinel, CrowdStrike, Splunk, Google SecOps, Palo Alto Cortex XSIAM, SentinelOne, Elastic and Netskope, and its threat research group (ASTRO) publishes open YARA rulesets on GitHub. Abstract Security has raised roughly $28.5M from Munich Re Ventures, Crosslink Capital, Rally Ventures and Liquid 2 Ventures. As of this profiling pass the company operates no public developer portal, publishes no API reference or machine-readable contract, and routes platform access through a sales/demo motion.
 
-- Website: https://www.abstract.security/
-- Integrations catalog: https://www.abstract.security/integrations
-- GitHub (ASTRO threat research): https://github.com/AbstractSecurity
+**Areas:** Security · Cybersecurity · SIEM · Security Data Pipeline · Threat Detection · Security Operations · Log Management · Data Streaming · Observability · Threat Intelligence · Cloud Security · AI Security
 
-## API surface
+## Abstract Security on APIs.io
 
-As of the 2026-09-06 enrichment pass, Abstract Security publishes **no public developer portal, no
-API reference, and no machine-readable contract**. `/docs`, `/developers`, `/api`, `/api-docs` and
-`/openapi.json` all return 404 on `www.abstract.security`; the 348-URL sitemap contains no developer
-page; every named `/.well-known/` path 404s on both hosts (with a negative control confirming the
-host is not a catch-all responder); and no A2A agent card, MCP server, GraphQL endpoint, gRPC/WSDL
-contract or first-party SDK exists in any public registry. The API host named in the company's own
-TLS certificate, `api.abstract.security`, publishes no public DNS record. Platform access runs
-through the demo request at `/get-a-demo`, so this profile is recorded as `gated` / `sales-gate`.
+Everything profiled for Abstract Security is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/abstract-security/](https://apis.io/providers/abstract-security/)** — or go straight to one of the APIs or properties below.
 
-What the company *does* publish machine-readably is a real `/llms.txt`, harvested verbatim to
-`llms/abstract-security-llms.txt`.
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Abstract Security Domain Security](https://apis.io/security/abstract-security/abstract-security-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Abstract Security Plans Pricing](https://apis.io/plans/abstract-security/abstract-security-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Abstract Security Rate Limits](https://apis.io/rate-limits/abstract-security/abstract-security-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.abstract.security/)
+- [Sign up](https://www.abstract.security/get-a-demo)
+- [Support](https://www.abstract.security/contact-us)
+- [Blog](https://www.abstract.security/abstract-canvas)
+- [Terms of service](https://www.abstract.security/policies/terms-and-conditions)
+- [Privacy policy](https://www.abstract.security/policies/privacy-policy)
+- [GitHub](https://github.com/AbstractSecurity)
+
+## API Evangelist rating
+
+**Kin Score 13.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 34.2 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/abstract-security/](https://apis.io/providers/abstract-security/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Abstract Security: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/abstract-security/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
